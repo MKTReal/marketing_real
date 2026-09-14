@@ -1,4 +1,4 @@
-<!-- MONTE • AJUSTE 46 (fundo calibrado e aluno sem corte)
+<!-- MONTE • AJUSTE 47 (elemento verde da base esquerda removido)
 Cole este bloco inteiro no Bitrix, substituindo a versão anterior.
 Pendências para a equipe do colégio:
   1) data-edital-url  → link do PDF do edital 2027
@@ -408,28 +408,19 @@ Fontes oficiais, formulário e integração com Bitrix ainda devem ser conectado
   width:clamp(120px,12vw,176px);height:auto;pointer-events:none;
   filter:drop-shadow(0 4px 14px rgba(0,17,13,.3));
 }
-/* elemento menor, embaixo à esquerda do aluno (fora da área da "cobrinha") */
-#monte2027 .m-hero-deco{
-  position:absolute;z-index:0;pointer-events:none;
-  width:280px;height:280px;left:-70px;bottom:-110px;opacity:.5;transform:rotate(-28deg);
-  background:url("https://raw.githubusercontent.com/colegiomontemarketing/provao-de-bolsas/72cd4574af02e8c9c905e480b6d74d07c27d9cd6/elemento-verde-bg.png") center/contain no-repeat;
-}
 @media(min-width:640px) and (max-width:1099px){
   #monte2027 .m-brand{top:22px;width:clamp(108px,14vw,146px)}
-  #monte2027 .m-hero-deco{width:210px;height:210px;left:-60px;bottom:-90px;opacity:.42}
 }
 @media(max-width:639px){
   #monte2027 .m-brand{top:16px;left:20px;width:112px}
-  #monte2027 .m-hero-deco{display:none}
   /* espaço para o logo não encostar no conteúdo */
   #monte2027 .m-hero-grid{padding-top:64px}
 }
 </style>
 
-<div id="monte2027" data-version="46" data-edital-url="" data-video-url="" data-video-poster="" data-privacy-url="">
+<div id="monte2027" data-version="47" data-edital-url="" data-video-url="" data-video-poster="" data-privacy-url="">
   <section class="m-hero" aria-label="Provão Monte 2027">
     <svg class="m-ribbon m-ribbon--hero" viewBox="0 0 390 90" aria-hidden="true" focusable="false"><path d="M-20 100C60 100 67 20 157 24S278 72 420 8"/></svg>
-    <span class="m-hero-deco" aria-hidden="true"></span>
     <img class="m-brand" src="https://raw.githubusercontent.com/colegiomontemarketing/provao-de-bolsas/e3b0f5b48bd71719cabc1b7f6a528cfc60709199/Logo-colegio-monte-rn.png" width="3132" height="946" alt="Colégio Monte">
     <div class="m-shell m-hero-grid">
       <figure class="m-student">
