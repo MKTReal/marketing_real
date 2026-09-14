@@ -1,11 +1,11 @@
-<!-- MONTE • AJUSTE 52 (aluno mais baixo + selo reposicionado)
+<!-- MONTE • AJUSTE 53 (selo alinhado, título/oferta maiores, card menor e contagem regressiva)
 Cole este bloco inteiro no Bitrix, substituindo a versão anterior.
 Pendências para a equipe do colégio:
   1) data-edital-url  → link do PDF do edital 2027
   2) data-video-url / data-video-poster → vídeo vertical (9:16) e imagem de capa
   3) data-privacy-url → link da política de privacidade
   4) data-feature-img-1 a data-feature-img-4 → fotos dos 4 diferenciais (mesma ordem dos cards)
-  5) Data real do provão (atualmente "Dia 00/00", texto fixo no HTML)
+  5) Data do provão: 17/10 (texto no HTML) e data-exam-date="2026-10-17T08:00:00-03:00" (contador)
 Fontes oficiais, formulário e integração com Bitrix ainda devem ser conectados.
 -->
 <style>
@@ -312,20 +312,20 @@ Fontes oficiais, formulário e integração com Bitrix ainda devem ser conectado
 @media(min-width:1100px){
   /* coluna do aluno preservada para a figura não ser cortada nas laterais */
   #monte2027 .m-hero-grid{
-    grid-template-columns:minmax(0,1.35fr) minmax(0,1.2fr) minmax(0,1.05fr);
+    grid-template-columns:minmax(0,1.28fr) minmax(0,1.34fr) minmax(0,1.02fr);
     gap:24px;align-items:center;
   }
   /* em laptops o formulário precisa de mais folga: aluno divide melhor o espaço */
   @media(max-width:1500px){
-    #monte2027 .m-hero-grid{grid-template-columns:minmax(0,1.1fr) minmax(0,1.18fr) minmax(0,1.12fr)}
+    #monte2027 .m-hero-grid{grid-template-columns:minmax(0,1.02fr) minmax(0,1.3fr) minmax(0,1.1fr)}
   }
   /* gap menor = os três blocos da campanha ficam mais integrados */
   #monte2027 .m-campaign{align-self:center;gap:8px;padding:0}
-  #monte2027 .m-title-art{max-width:310px}
+  #monte2027 .m-title-art{max-width:352px}
   #monte2027 .m-offer-art{
-    width:100%;max-width:430px;flex-shrink:0;margin:0;
+    width:100%;max-width:484px;flex-shrink:0;margin:0;
   }
-  #monte2027 .m-event{margin-top:2px;width:min(100%,310px)}
+  #monte2027 .m-event{margin-top:6px;width:min(100%,268px)}
 }
 @media(min-width:640px) and (max-width:1099px){
   #monte2027 .m-campaign{gap:8px}
@@ -398,7 +398,7 @@ Fontes oficiais, formulário e integração com Bitrix ainda devem ser conectado
   position:absolute;z-index:2;width:clamp(84px,8vw,124px);height:auto;
   /* ancorado pela BASE, igual à figura, para os dois acompanharem juntos.
      bottom = altura do selo · right = sobreposição ao aluno (maior = mais em cima) */
-  top:auto;bottom:44%;right:25%;pointer-events:none;transform:rotate(-6deg);
+  top:auto;bottom:47%;right:25%;pointer-events:none;transform:rotate(-6deg);
   filter:drop-shadow(0 8px 18px rgba(0,17,13,.35));
 }
 @media(min-width:640px) and (max-width:1099px){
@@ -406,6 +406,29 @@ Fontes oficiais, formulário e integração com Bitrix ainda devem ser conectado
 }
 @media(max-width:639px){
   #monte2027 .m-seal{display:none}
+}
+/* AJUSTE 53 — contagem regressiva para o dia do provão. */
+#monte2027 .m-countdown{width:100%;max-width:330px;margin-top:12px;text-align:center}
+#monte2027 .m-countdown-label{
+  display:block;color:#d8f3dd;font-size:12px;font-weight:650;
+  letter-spacing:.09em;text-transform:uppercase;margin-bottom:8px;
+}
+#monte2027 .m-countdown-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:8px}
+#monte2027 .m-cd{
+  background:rgba(255,255,255,.1);border:1px solid rgba(188,246,76,.3);
+  border-radius:12px;padding:8px 4px 7px;
+}
+#monte2027 .m-cd strong{
+  display:block;color:var(--lime);font-size:26px;line-height:1;
+  font-weight:800;letter-spacing:-.02em;font-variant-numeric:tabular-nums;
+}
+#monte2027 .m-cd span{
+  display:block;color:#cfe9d6;font-size:10.5px;font-weight:650;
+  letter-spacing:.06em;text-transform:uppercase;margin-top:5px;
+}
+@media(max-width:639px){
+  #monte2027 .m-countdown{max-width:300px;margin:4px auto 0}
+  #monte2027 .m-cd strong{font-size:23px}
 }
 /* AJUSTE 45 — logo branco no topo-esquerdo + terceira aplicação do elemento
    verde, reforçando o fundo sem competir com a chamada principal. */
@@ -469,7 +492,7 @@ Fontes oficiais, formulário e integração com Bitrix ainda devem ser conectado
 }
 </style>
 
-<div id="monte2027" data-version="52" data-edital-url="" data-video-url="" data-video-poster="" data-privacy-url="">
+<div id="monte2027" data-version="53" data-exam-date="2026-10-17T08:00:00-03:00" data-edital-url="" data-video-url="" data-video-poster="" data-privacy-url="">
   <section class="m-hero" aria-label="Provão Monte 2027">
     <svg class="m-ribbon m-ribbon--hero" viewBox="0 0 390 90" aria-hidden="true" focusable="false"><path d="M-20 100C60 100 67 20 157 24S278 72 420 8"/></svg>
     <img class="m-brand" src="https://raw.githubusercontent.com/colegiomontemarketing/provao-de-bolsas/e3b0f5b48bd71719cabc1b7f6a528cfc60709199/Logo-colegio-monte-rn.png" width="3132" height="946" alt="Colégio Monte">
@@ -484,9 +507,19 @@ Fontes oficiais, formulário e integração com Bitrix ainda devem ser conectado
         <div class="m-event" id="monte-evento">
           <div class="m-event-art">
             <img src="https://raw.githubusercontent.com/colegiomontemarketing/provao-de-bolsas/b31904958ee18609031105436d52409afe1f46f7/tag-data-provao-e-tag-local.png" width="349" height="323" alt="Anos Finais e Ensino Médio">
-            <div class="m-event-date"><strong>Dia 00/00</strong></div>
+            <div class="m-event-date"><strong>Dia 17/10</strong></div>
           <img class="m-place-art" src="https://raw.githubusercontent.com/colegiomontemarketing/provao-de-bolsas/b31904958ee18609031105436d52409afe1f46f7/tag-praia-shopping.png" alt="Praia Shopping"></div>
-          
+
+        </div>
+        <!-- Contagem regressiva: a data vem de data-exam-date no #monte2027. -->
+        <div class="m-countdown" data-countdown hidden>
+          <span class="m-countdown-label">Faltam para o Provão</span>
+          <div class="m-countdown-grid">
+            <div class="m-cd"><strong data-cd="d">00</strong><span>dias</span></div>
+            <div class="m-cd"><strong data-cd="h">00</strong><span>horas</span></div>
+            <div class="m-cd"><strong data-cd="m">00</strong><span>min</span></div>
+            <div class="m-cd"><strong data-cd="s">00</strong><span>seg</span></div>
+          </div>
         </div>
       </div>
       <section class="m-form" id="monte-inscricao" aria-labelledby="monte-form-title">
@@ -654,6 +687,38 @@ Fontes oficiais, formulário e integração com Bitrix ainda devem ser conectado
     var poster = safeUrl(root.dataset.videoPoster);
     if (poster) video.poster = poster;
     root.querySelector('[data-video-slot]').replaceChildren(video);
+  }
+  // Contagem regressiva até a data do provão (data-exam-date no #monte2027).
+  var countdown = root.querySelector('[data-countdown]');
+  var examDate = root.dataset.examDate ? new Date(root.dataset.examDate) : null;
+  if (countdown && examDate && !isNaN(examDate.getTime())) {
+    var parts = {
+      d: countdown.querySelector('[data-cd="d"]'),
+      h: countdown.querySelector('[data-cd="h"]'),
+      m: countdown.querySelector('[data-cd="m"]'),
+      s: countdown.querySelector('[data-cd="s"]')
+    };
+    var label = countdown.querySelector('.m-countdown-label');
+    var pad = function (n) { return n < 10 ? '0' + n : String(n); };
+    var timer;
+    var tick = function () {
+      var diff = examDate.getTime() - Date.now();
+      if (diff <= 0) {
+        if (timer) clearInterval(timer);
+        if (label) label.textContent = 'O Provão Monte é hoje!';
+        parts.d.textContent = parts.h.textContent = '00';
+        parts.m.textContent = parts.s.textContent = '00';
+        return;
+      }
+      var s = Math.floor(diff / 1000);
+      parts.d.textContent = pad(Math.floor(s / 86400));
+      parts.h.textContent = pad(Math.floor(s % 86400 / 3600));
+      parts.m.textContent = pad(Math.floor(s % 3600 / 60));
+      parts.s.textContent = pad(s % 60);
+    };
+    tick();
+    countdown.hidden = false;
+    timer = setInterval(tick, 1000);
   }
   if ('IntersectionObserver' in window && !reduce.matches) {
     var observer = new IntersectionObserver(function (entries) {
