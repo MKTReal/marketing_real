@@ -1,4 +1,4 @@
-<!-- MONTE • AJUSTE 42 (selo sobrepondo o ombro do aluno)
+<!-- MONTE • AJUSTE 43 (selo sincronizado em 16% + serpente do formulário mais grossa)
 Cole este bloco inteiro no Bitrix, substituindo a versão anterior.
 Pendências para a equipe do colégio:
   1) data-edital-url  → link do PDF do edital 2027
@@ -119,7 +119,7 @@ Fontes oficiais, formulário e integração com Bitrix ainda devem ser conectado
 #monte2027 .m-results{background:var(--forest);padding-block:58px;position:relative;overflow:hidden}
 #monte2027 .m-results-grid{display:grid;grid-template-columns:1.25fr 1fr .8fr;gap:48px;align-items:center;position:relative;z-index:1}
 #monte2027 .m-ribbon{position:absolute;pointer-events:none;z-index:0;overflow:visible;fill:none;stroke:var(--lime);stroke-width:25;stroke-linecap:round;opacity:.6}
-#monte2027 .m-ribbon--hero{width:390px;height:90px;right:-75px;bottom:-35px;stroke-width:16;opacity:.6}
+#monte2027 .m-ribbon--hero{width:390px;height:90px;right:-75px;bottom:-35px;stroke-width:30;opacity:.6}
 #monte2027 .m-ribbon--results{width:700px;height:245px;right:-170px;bottom:-166px;stroke-width:23;opacity:.75}
 #monte2027 .m-results h2{color:#fff;font-size:38px}
 #monte2027 .m-results em,#monte2027 .m-results .m-kicker{color:var(--lime)}
@@ -166,7 +166,7 @@ Fontes oficiais, formulário e integração com Bitrix ainda devem ser conectado
  #monte2027 .m-stat{padding-left:22px}
 }
 @media(max-width:639px){
- #monte2027 .m-ribbon--hero{width:230px;height:65px;right:-75px;bottom:-23px;stroke-width:14;opacity:.5}
+ #monte2027 .m-ribbon--hero{width:230px;height:65px;right:-75px;bottom:-23px;stroke-width:24;opacity:.5}
  #monte2027 .m-ribbon--results{width:430px;height:190px;right:-155px;bottom:-143px}
  #monte2027 .m-hero::before{width:180px;height:180px;left:-100px;top:-115px;opacity:.5}
  #monte2027 .m-shell{width:calc(100% - 32px)}
@@ -390,7 +390,7 @@ Fontes oficiais, formulário e integração com Bitrix ainda devem ser conectado
    (sobreposto à camisa), ancorado à figura para acompanhar em qualquer tela. */
 #monte2027 .m-seal{
   position:absolute;z-index:2;width:clamp(84px,8vw,124px);height:auto;
-  top:36%;right:26%;pointer-events:none;transform:rotate(-6deg);
+  top:36%;right:16%;pointer-events:none;transform:rotate(-6deg);/* right = sobreposição ao aluno (maior = mais em cima dele) */
   filter:drop-shadow(0 8px 18px rgba(0,17,13,.35));
 }
 @media(min-width:640px) and (max-width:1099px){
@@ -401,7 +401,7 @@ Fontes oficiais, formulário e integração com Bitrix ainda devem ser conectado
 }
 </style>
 
-<div id="monte2027" data-version="42" data-edital-url="" data-video-url="" data-video-poster="" data-privacy-url="">
+<div id="monte2027" data-version="43" data-edital-url="" data-video-url="" data-video-poster="" data-privacy-url="">
   <section class="m-hero" aria-label="Provão Monte 2027">
     <svg class="m-ribbon m-ribbon--hero" viewBox="0 0 390 90" aria-hidden="true" focusable="false"><path d="M-20 100C60 100 67 20 157 24S278 72 420 8"/></svg>
     <div class="m-shell m-hero-grid">
