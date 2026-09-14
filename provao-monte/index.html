@@ -1,4 +1,4 @@
-<!-- MONTE • AJUSTE 48 (mobile sem o aluno, campanha em largura total)
+<!-- MONTE • AJUSTE 49 (degradê na lateral esquerda do aluno)
 Cole este bloco inteiro no Bitrix, substituindo a versão anterior.
 Pendências para a equipe do colégio:
   1) data-edital-url  → link do PDF do edital 2027
@@ -416,6 +416,13 @@ Fontes oficiais, formulário e integração com Bitrix ainda devem ser conectado
   /* espaço para o logo não encostar no conteúdo */
   #monte2027 .m-hero-grid{padding-top:64px}
 }
+/* AJUSTE 49 — degradê na lateral esquerda do aluno: a coluna tem overflow
+   hidden, então a figura (e a drop-shadow dela) era cortada em linha reta.
+   A máscara dissolve essa borda no fundo. */
+#monte2027 .m-student{
+  -webkit-mask-image:linear-gradient(90deg,transparent 0,rgba(0,0,0,.35) 4%,#000 11%,#000 100%);
+  mask-image:linear-gradient(90deg,transparent 0,rgba(0,0,0,.35) 4%,#000 11%,#000 100%);
+}
 /* AJUSTE 48 — no celular o aluno sai e a campanha ocupa a largura toda,
    deixando o banner mais limpo e a oferta maior. */
 @media(max-width:639px){
@@ -428,7 +435,7 @@ Fontes oficiais, formulário e integração com Bitrix ainda devem ser conectado
 }
 </style>
 
-<div id="monte2027" data-version="48" data-edital-url="" data-video-url="" data-video-poster="" data-privacy-url="">
+<div id="monte2027" data-version="49" data-edital-url="" data-video-url="" data-video-poster="" data-privacy-url="">
   <section class="m-hero" aria-label="Provão Monte 2027">
     <svg class="m-ribbon m-ribbon--hero" viewBox="0 0 390 90" aria-hidden="true" focusable="false"><path d="M-20 100C60 100 67 20 157 24S278 72 420 8"/></svg>
     <img class="m-brand" src="https://raw.githubusercontent.com/colegiomontemarketing/provao-de-bolsas/e3b0f5b48bd71719cabc1b7f6a528cfc60709199/Logo-colegio-monte-rn.png" width="3132" height="946" alt="Colégio Monte">
