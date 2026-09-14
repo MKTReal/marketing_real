@@ -1,4 +1,4 @@
-<!-- MONTE • AJUSTE 30 (proporção do aluno reequilibrada no hero)
+<!-- MONTE • AJUSTE 31 (aluno aterrado + container do hero restaurado)
 Cole este bloco inteiro no Bitrix, substituindo a versão anterior.
 Pendências para a equipe do colégio:
   1) data-edital-url  → link do PDF do edital 2027
@@ -351,7 +351,7 @@ Fontes oficiais, formulário e integração com Bitrix ainda devem ser conectado
    Hero ocupa a altura da tela e centraliza; o formulário fica mais compacto. */
 @media(min-width:1100px){
   #monte2027 .m-hero{min-height:100vh;display:flex;align-items:center}
-  #monte2027 .m-hero-grid{width:100%;padding-top:0}
+  #monte2027 .m-hero-grid{padding-top:0}
   #monte2027 .m-student{height:660px}
   #monte2027 .m-form{padding:22px 26px;margin-bottom:0}
   #monte2027 .m-form h2{font-size:25px}
@@ -373,9 +373,20 @@ Fontes oficiais, formulário e integração com Bitrix ainda devem ser conectado
 @keyframes m27drift2{0%,100%{transform:rotate(20deg) translate(0,0)}50%{transform:rotate(24deg) translate(-16px,12px)}}
 #monte2027 .m-hero::before{animation:m27drift1 18s ease-in-out infinite;will-change:transform}
 #monte2027 .m-hero::after{animation:m27drift2 22s ease-in-out infinite;will-change:transform}
+/* AJUSTE 31 — aluno "aterrado" no desktop: ocupa a altura do hero e encosta na
+   base da tela (sem retângulo flutuando / corte solto), enquanto o conteúdo
+   permanece dentro do container de 1280px (formulário com respiro na lateral). */
+@media(min-width:1100px){
+  #monte2027 .m-hero{align-items:stretch}
+  #monte2027 .m-hero-grid{min-height:100vh;align-items:center}
+  #monte2027 .m-student{height:auto;align-self:stretch;overflow:hidden;align-items:flex-end;justify-content:center}
+  #monte2027 .m-student img{
+    width:auto;height:112vh;max-width:150%;object-fit:contain;object-position:center bottom;margin:0;
+  }
+}
 </style>
 
-<div id="monte2027" data-version="30" data-edital-url="" data-video-url="" data-video-poster="" data-privacy-url="">
+<div id="monte2027" data-version="31" data-edital-url="" data-video-url="" data-video-poster="" data-privacy-url="">
   <section class="m-hero" aria-label="Provão Monte 2027">
     <svg class="m-ribbon m-ribbon--hero" viewBox="0 0 390 90" aria-hidden="true" focusable="false"><path d="M-20 100C60 100 67 20 157 24S278 72 420 8"/></svg>
     <div class="m-shell m-hero-grid">
