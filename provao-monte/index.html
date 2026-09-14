@@ -1,4 +1,4 @@
-<!-- MONTE • AJUSTE 33 (serpentes da marca saindo de trás do aluno)
+<!-- MONTE • AJUSTE 34 (serpentes horizontais cruzando atrás do aluno)
 Cole este bloco inteiro no Bitrix, substituindo a versão anterior.
 Pendências para a equipe do colégio:
   1) data-edital-url  → link do PDF do edital 2027
@@ -389,7 +389,7 @@ Fontes oficiais, formulário e integração com Bitrix ainda devem ser conectado
 /* AJUSTE 33 — "serpentes" (fitas onduladas da marca) saindo de trás do aluno,
    desenhadas em SVG e com leve movimento. Ficam atrás do grid (z-index:0). */
 #monte2027 .m-snakes{
-  position:absolute;left:0;top:0;height:100%;width:min(60%,780px);z-index:0;
+  position:absolute;left:0;top:0;height:100%;width:100%;z-index:0;
   pointer-events:none;overflow:visible;opacity:.9;
 }
 #monte2027 .m-snake{fill:none;stroke-linecap:round;stroke-linejoin:round;transform-box:fill-box;transform-origin:center}
@@ -405,10 +405,10 @@ Fontes oficiais, formulário e integração com Bitrix ainda devem ser conectado
 <div id="monte2027" data-version="33" data-edital-url="" data-video-url="" data-video-poster="" data-privacy-url="">
   <section class="m-hero" aria-label="Provão Monte 2027">
     <svg class="m-ribbon m-ribbon--hero" viewBox="0 0 390 90" aria-hidden="true" focusable="false"><path d="M-20 100C60 100 67 20 157 24S278 72 420 8"/></svg>
-    <svg class="m-snakes" viewBox="0 0 1000 1000" preserveAspectRatio="xMidYMid slice" aria-hidden="true" focusable="false">
-      <path class="m-snake m-snake--1" d="M120 960 C30 780 300 720 210 540 S-30 320 250 200 S520 130 430 -40"/>
-      <path class="m-snake m-snake--2" d="M600 720 C520 560 760 520 660 360 S520 180 780 80 S900 40 1020 -20"/>
-      <path class="m-snake m-snake--3" d="M300 900 C250 720 470 670 390 510 S230 320 430 210"/>
+    <svg class="m-snakes" viewBox="0 0 1920 900" preserveAspectRatio="xMidYMid slice" aria-hidden="true" focusable="false">
+      <path class="m-snake m-snake--1" d="M-80 520 C130 440 240 660 380 650 S620 590 770 690 S1010 880 1180 900"/>
+      <path class="m-snake m-snake--2" d="M-80 600 C150 520 250 720 400 705 S640 650 800 750 S1040 930 1220 960"/>
+      <path class="m-snake m-snake--3" d="M-60 300 C120 250 270 360 430 320 S660 240 800 300"/>
     </svg>
     <div class="m-shell m-hero-grid">
       <figure class="m-student">
