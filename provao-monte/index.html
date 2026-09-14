@@ -1,4 +1,4 @@
-<!-- MONTE • AJUSTE 45 (logo branco, fundo reforçado, oferta em destaque e stack mais integrado)
+<!-- MONTE • AJUSTE 46 (fundo calibrado e aluno sem corte)
 Cole este bloco inteiro no Bitrix, substituindo a versão anterior.
 Pendências para a equipe do colégio:
   1) data-edital-url  → link do PDF do edital 2027
@@ -201,12 +201,12 @@ Fontes oficiais, formulário e integração com Bitrix ainda devem ser conectado
 @media(prefers-reduced-motion:reduce){#monte2027 *,#monte2027 *::before,#monte2027 *::after{animation:none!important;transition:none!important;scroll-behavior:auto!important}}
 /* AJUSTE 18 — composição do banner e tag oficial de localização. */
 #monte2027 .m-hero::before{
-  width:900px;height:900px;left:-260px;top:-250px;opacity:.85;transform:rotate(-12deg);
+  width:660px;height:660px;left:-235px;top:-190px;opacity:.62;transform:rotate(-12deg);
 }
 #monte2027 .m-hero::after{
-  content:"";position:absolute;width:620px;height:620px;right:-210px;top:-180px;
+  content:"";position:absolute;width:500px;height:500px;right:-175px;top:-150px;
   background:url("https://raw.githubusercontent.com/colegiomontemarketing/provao-de-bolsas/72cd4574af02e8c9c905e480b6d74d07c27d9cd6/elemento-verde-bg.png") center/contain no-repeat;
-  opacity:.8;transform:rotate(20deg);pointer-events:none;z-index:0;
+  opacity:.68;transform:rotate(20deg);pointer-events:none;z-index:0;
 }
 
 
@@ -310,15 +310,16 @@ Fontes oficiais, formulário e integração com Bitrix ainda devem ser conectado
 /* AJUSTE 26 — stack central integrado: título → oferta → card no mesmo eixo,
    com espaçamento uniforme e oferta contida na coluna (sem transbordar). */
 @media(min-width:1100px){
+  /* coluna do aluno preservada para a figura não ser cortada nas laterais */
   #monte2027 .m-hero-grid{
-    grid-template-columns:minmax(0,1.05fr) minmax(0,1.32fr) minmax(0,1.05fr);
+    grid-template-columns:minmax(0,1.14fr) minmax(0,1.22fr) minmax(0,1.08fr);
     gap:24px;align-items:center;
   }
   /* gap menor = os três blocos da campanha ficam mais integrados */
   #monte2027 .m-campaign{align-self:center;gap:8px;padding:0}
-  #monte2027 .m-title-art{max-width:318px}
+  #monte2027 .m-title-art{max-width:310px}
   #monte2027 .m-offer-art{
-    width:100%;max-width:458px;flex-shrink:0;margin:0;
+    width:100%;max-width:430px;flex-shrink:0;margin:0;
   }
   #monte2027 .m-event{margin-top:2px;width:min(100%,310px)}
 }
@@ -407,14 +408,15 @@ Fontes oficiais, formulário e integração com Bitrix ainda devem ser conectado
   width:clamp(120px,12vw,176px);height:auto;pointer-events:none;
   filter:drop-shadow(0 4px 14px rgba(0,17,13,.3));
 }
+/* elemento menor, embaixo à esquerda do aluno (fora da área da "cobrinha") */
 #monte2027 .m-hero-deco{
   position:absolute;z-index:0;pointer-events:none;
-  width:600px;height:600px;right:-140px;bottom:-250px;opacity:.5;transform:rotate(-32deg);
+  width:280px;height:280px;left:-70px;bottom:-110px;opacity:.5;transform:rotate(-28deg);
   background:url("https://raw.githubusercontent.com/colegiomontemarketing/provao-de-bolsas/72cd4574af02e8c9c905e480b6d74d07c27d9cd6/elemento-verde-bg.png") center/contain no-repeat;
 }
 @media(min-width:640px) and (max-width:1099px){
   #monte2027 .m-brand{top:22px;width:clamp(108px,14vw,146px)}
-  #monte2027 .m-hero-deco{width:440px;height:440px;right:-150px;bottom:-210px;opacity:.42}
+  #monte2027 .m-hero-deco{width:210px;height:210px;left:-60px;bottom:-90px;opacity:.42}
 }
 @media(max-width:639px){
   #monte2027 .m-brand{top:16px;left:20px;width:112px}
@@ -424,7 +426,7 @@ Fontes oficiais, formulário e integração com Bitrix ainda devem ser conectado
 }
 </style>
 
-<div id="monte2027" data-version="45" data-edital-url="" data-video-url="" data-video-poster="" data-privacy-url="">
+<div id="monte2027" data-version="46" data-edital-url="" data-video-url="" data-video-poster="" data-privacy-url="">
   <section class="m-hero" aria-label="Provão Monte 2027">
     <svg class="m-ribbon m-ribbon--hero" viewBox="0 0 390 90" aria-hidden="true" focusable="false"><path d="M-20 100C60 100 67 20 157 24S278 72 420 8"/></svg>
     <span class="m-hero-deco" aria-hidden="true"></span>
