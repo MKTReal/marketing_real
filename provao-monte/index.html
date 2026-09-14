@@ -1,4 +1,4 @@
-<!-- MONTE • AJUSTE 51 (nova foto do aluno já recortada + proporções recalibradas)
+<!-- MONTE • AJUSTE 52 (aluno mais baixo + selo reposicionado)
 Cole este bloco inteiro no Bitrix, substituindo a versão anterior.
 Pendências para a equipe do colégio:
   1) data-edital-url  → link do PDF do edital 2027
@@ -396,11 +396,13 @@ Fontes oficiais, formulário e integração com Bitrix ainda devem ser conectado
    (sobreposto à camisa), ancorado à figura para acompanhar em qualquer tela. */
 #monte2027 .m-seal{
   position:absolute;z-index:2;width:clamp(84px,8vw,124px);height:auto;
-  top:36%;right:16%;pointer-events:none;transform:rotate(-6deg);/* right = sobreposição ao aluno (maior = mais em cima dele) */
+  /* ancorado pela BASE, igual à figura, para os dois acompanharem juntos.
+     bottom = altura do selo · right = sobreposição ao aluno (maior = mais em cima) */
+  top:auto;bottom:44%;right:25%;pointer-events:none;transform:rotate(-6deg);
   filter:drop-shadow(0 8px 18px rgba(0,17,13,.35));
 }
 @media(min-width:640px) and (max-width:1099px){
-  #monte2027 .m-seal{top:34%;right:14%;width:clamp(72px,9vw,104px)}
+  #monte2027 .m-seal{top:auto;bottom:42%;right:22%;width:clamp(72px,9vw,104px)}
 }
 @media(max-width:639px){
   #monte2027 .m-seal{display:none}
@@ -438,7 +440,9 @@ Fontes oficiais, formulário e integração com Bitrix ainda devem ser conectado
     align-items:flex-end;justify-content:center;
   }
   #monte2027 .m-student-photo{
-    width:100%;height:100%;max-width:100%;
+    /* height < 100% deixa um respiro acima da cabeça: a figura continua
+       aterrada na base, mas não encosta no topo do banner */
+    width:100%;height:84%;max-width:100%;
     object-fit:contain;object-position:center bottom;
     margin:0;transform:none;
   }
@@ -465,7 +469,7 @@ Fontes oficiais, formulário e integração com Bitrix ainda devem ser conectado
 }
 </style>
 
-<div id="monte2027" data-version="51" data-edital-url="" data-video-url="" data-video-poster="" data-privacy-url="">
+<div id="monte2027" data-version="52" data-edital-url="" data-video-url="" data-video-poster="" data-privacy-url="">
   <section class="m-hero" aria-label="Provão Monte 2027">
     <svg class="m-ribbon m-ribbon--hero" viewBox="0 0 390 90" aria-hidden="true" focusable="false"><path d="M-20 100C60 100 67 20 157 24S278 72 420 8"/></svg>
     <img class="m-brand" src="https://raw.githubusercontent.com/colegiomontemarketing/provao-de-bolsas/e3b0f5b48bd71719cabc1b7f6a528cfc60709199/Logo-colegio-monte-rn.png" width="3132" height="946" alt="Colégio Monte">
