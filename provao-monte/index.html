@@ -1,4 +1,4 @@
-<!-- MONTE • AJUSTE 25 (oferta ampliada e mais espaço entre as artes)
+<!-- MONTE • AJUSTE 26 (stack central do hero integrado — mesmo eixo e espaçamento uniforme)
 Cole este bloco inteiro no Bitrix, substituindo a versão anterior.
 Pendências para a equipe do colégio:
   1) data-edital-url  → link do PDF do edital 2027
@@ -307,30 +307,31 @@ Fontes oficiais, formulário e integração com Bitrix ainda devem ser conectado
   #monte2027 .m-title-art{width:88%;max-width:195px}
   #monte2027 .m-offer-art{width:100%;max-width:260px;margin:10px auto 6px}
 }
-/* AJUSTE 25 — oferta dominante e separação clara entre os três blocos. */
+/* AJUSTE 26 — stack central integrado: título → oferta → card no mesmo eixo,
+   com espaçamento uniforme e oferta contida na coluna (sem transbordar). */
 @media(min-width:1100px){
   #monte2027 .m-hero-grid{
-    grid-template-columns:minmax(0,1.15fr) minmax(0,1.25fr) minmax(0,1.05fr);
-    gap:32px;
+    grid-template-columns:minmax(0,1.1fr) minmax(0,1.15fr) minmax(0,1.05fr);
+    gap:28px;align-items:center;
   }
-  #monte2027 .m-campaign{gap:0;padding:4px 0 40px}
-  #monte2027 .m-title-art{max-width:290px}
+  #monte2027 .m-campaign{align-self:center;gap:22px;padding:0}
+  #monte2027 .m-title-art{max-width:330px}
   #monte2027 .m-offer-art{
-    width:110%;max-width:none;flex-shrink:0;margin:38px 0 36px;
+    width:100%;max-width:380px;flex-shrink:0;margin:0;
   }
-  #monte2027 .m-event{margin-top:0}
+  #monte2027 .m-event{margin-top:2px;width:min(100%,300px)}
 }
 @media(min-width:640px) and (max-width:1099px){
-  #monte2027 .m-campaign{gap:0}
-  #monte2027 .m-offer-art{width:100%;max-width:none;margin:30px auto}
+  #monte2027 .m-campaign{gap:18px}
+  #monte2027 .m-offer-art{width:100%;max-width:340px;margin:0 auto}
 }
 @media(max-width:639px){
-  #monte2027 .m-campaign{gap:0}
-  #monte2027 .m-offer-art{width:100%;max-width:none;margin:20px auto 22px}
+  #monte2027 .m-campaign{gap:12px}
+  #monte2027 .m-offer-art{width:100%;max-width:250px;margin:0 auto}
 }
 </style>
 
-<div id="monte2027" data-version="25" data-edital-url="" data-video-url="" data-video-poster="" data-privacy-url="">
+<div id="monte2027" data-version="26" data-edital-url="" data-video-url="" data-video-poster="" data-privacy-url="">
   <section class="m-hero" aria-label="Provão Monte 2027">
     <svg class="m-ribbon m-ribbon--hero" viewBox="0 0 390 90" aria-hidden="true" focusable="false"><path d="M-20 100C60 100 67 20 157 24S278 72 420 8"/></svg>
     <div class="m-shell m-hero-grid">
