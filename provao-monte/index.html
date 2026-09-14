@@ -1,4 +1,4 @@
-<!-- MONTE • AJUSTE 38 (selo redondo fixado ao lado do aluno)
+<!-- MONTE • AJUSTE 39 (selo encaixado no peito do aluno)
 Cole este bloco inteiro no Bitrix, substituindo a versão anterior.
 Pendências para a equipe do colégio:
   1) data-edital-url  → link do PDF do edital 2027
@@ -386,22 +386,22 @@ Fontes oficiais, formulário e integração com Bitrix ainda devem ser conectado
     transform:translateY(14vh);
   }
 }
-/* AJUSTE 38 — selo redondo "Provão Monte" fixado ao lado do aluno.
-   Ancorado à figura (.m-student) para acompanhar em qualquer tela. */
+/* AJUSTE 39 — selo redondo "Provão Monte" encaixado no peito do aluno
+   (sobreposto à camisa), ancorado à figura para acompanhar em qualquer tela. */
 #monte2027 .m-seal{
-  position:absolute;z-index:2;width:clamp(92px,9vw,148px);height:auto;
-  top:20%;right:3%;pointer-events:none;
+  position:absolute;z-index:2;width:clamp(80px,7.5vw,118px);height:auto;
+  top:40%;right:30%;pointer-events:none;transform:rotate(-6deg);
   filter:drop-shadow(0 8px 18px rgba(0,17,13,.35));
 }
 @media(min-width:640px) and (max-width:1099px){
-  #monte2027 .m-seal{top:16%;right:2%;width:clamp(84px,11vw,120px)}
+  #monte2027 .m-seal{top:40%;right:27%;width:clamp(72px,9vw,104px)}
 }
 @media(max-width:639px){
   #monte2027 .m-seal{display:none}
 }
 </style>
 
-<div id="monte2027" data-version="38" data-edital-url="" data-video-url="" data-video-poster="" data-privacy-url="">
+<div id="monte2027" data-version="39" data-edital-url="" data-video-url="" data-video-poster="" data-privacy-url="">
   <section class="m-hero" aria-label="Provão Monte 2027">
     <svg class="m-ribbon m-ribbon--hero" viewBox="0 0 390 90" aria-hidden="true" focusable="false"><path d="M-20 100C60 100 67 20 157 24S278 72 420 8"/></svg>
     <div class="m-shell m-hero-grid">
