@@ -1,4 +1,4 @@
-<!-- MONTE • AJUSTE 55 (mobile: contador abaixo do 100% + elemento verde no fundo)
+<!-- MONTE • AJUSTE 56 (card na proporção da arte, luz verde no aluno, label do contador removido)
 Cole este bloco inteiro no Bitrix, substituindo a versão anterior.
 Pendências para a equipe do colégio:
   1) data-edital-url  → link do PDF do edital 2027
@@ -232,6 +232,11 @@ Fontes oficiais, formulário e integração com Bitrix ainda devem ser conectado
 #monte2027 .m-event-art .m-place-art{
   position:absolute;z-index:1;left:17%;top:67%;width:65%;height:auto;margin:0;
 }
+/* AJUSTE 56 — proporções do card conforme a arte-modelo: data maior, pill
+   menor e os três blocos (texto fixo, data e pill) no mesmo eixo à esquerda. */
+#monte2027 .m-event-date{left:19.5%;right:5%;top:48%;height:20%}
+#monte2027 .m-event-date strong{font-size:48px;font-size:16.8cqw}
+#monte2027 .m-event-art .m-place-art{left:19.5%;top:70.5%;width:56%}
 /* A foto original tem margem clara: o recorte arredonda a área fotográfica. */
 #monte2027 .m-location-photo{
   border-radius:26px;clip-path:inset(5% 3% round 24px);
@@ -430,6 +435,19 @@ Fontes oficiais, formulário e integração com Bitrix ainda devem ser conectado
   #monte2027 .m-countdown{max-width:300px;margin:4px auto 2px}
   #monte2027 .m-cd strong{font-size:23px}
 }
+/* AJUSTE 56 — luz esverdeada saindo do ponto do selo sobre o aluno, para
+   justificar a aplicação do selo ali. Usa mix-blend-mode para ler como luz. */
+#monte2027 .m-glow{
+  position:absolute;z-index:2;pointer-events:none;
+  right:14%;bottom:38%;width:46%;aspect-ratio:1;
+  background:radial-gradient(circle at 62% 38%,
+    rgba(210,255,140,.55) 0%,
+    rgba(150,235,90,.28) 34%,
+    rgba(120,220,80,.10) 58%,
+    transparent 74%);
+  mix-blend-mode:screen;filter:blur(12px);
+}
+@media(max-width:639px){#monte2027 .m-glow{display:none}}
 /* AJUSTE 55 — o contador aparece SOMENTE no mobile (logo abaixo do "100%") */
 @media(min-width:640px){
   #monte2027 .m-countdown{display:none !important}
@@ -505,7 +523,7 @@ Fontes oficiais, formulário e integração com Bitrix ainda devem ser conectado
 }
 </style>
 
-<div id="monte2027" data-version="55" data-exam-date="2026-10-17T08:00:00-03:00" data-edital-url="" data-video-url="" data-video-poster="" data-privacy-url="">
+<div id="monte2027" data-version="56" data-exam-date="2026-10-17T08:00:00-03:00" data-edital-url="" data-video-url="" data-video-poster="" data-privacy-url="">
   <section class="m-hero" aria-label="Provão Monte 2027">
     <svg class="m-ribbon m-ribbon--hero" viewBox="0 0 390 90" aria-hidden="true" focusable="false"><path d="M-20 100C60 100 67 20 157 24S278 72 420 8"/></svg>
     <span class="m-hero-deco" aria-hidden="true"></span>
@@ -513,6 +531,7 @@ Fontes oficiais, formulário e integração com Bitrix ainda devem ser conectado
     <div class="m-shell m-hero-grid">
       <figure class="m-student">
         <img class="m-student-photo" src="https://raw.githubusercontent.com/colegiomontemarketing/provao-de-bolsas/de6df69c7461d7d793b86e670af18d5d1e29fb05/aluno-banner-corte.png" width="700" height="1039" alt="Aluno do Colégio Monte" fetchpriority="high">
+        <span class="m-glow" aria-hidden="true"></span>
         <img class="m-seal" src="https://raw.githubusercontent.com/colegiomontemarketing/provao-de-bolsas/149e51de0782d512d40ccc35945dd975cfe5ea31/elemento-icone-redondo-provao-monte.png" width="198" height="203" alt="" aria-hidden="true">
       </figure>
       <div class="m-campaign">
@@ -522,7 +541,6 @@ Fontes oficiais, formulário e integração com Bitrix ainda devem ser conectado
              Para usá-la em outra seção, basta mover este bloco: o CSS e o JS
              já estão no arquivo e a data vem de data-exam-date. -->
         <div class="m-countdown" data-countdown hidden>
-          <span class="m-countdown-label">Faltam para o Provão</span>
           <div class="m-countdown-grid">
             <div class="m-cd"><strong data-cd="d">00</strong><span>dias</span></div>
             <div class="m-cd"><strong data-cd="h">00</strong><span>horas</span></div>
