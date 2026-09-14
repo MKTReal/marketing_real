@@ -1,4 +1,4 @@
-<!-- MONTE • AJUSTE 31 (aluno aterrado + container do hero restaurado)
+<!-- MONTE • AJUSTE 32 (cabeça do aluno alinhada à altura do título)
 Cole este bloco inteiro no Bitrix, substituindo a versão anterior.
 Pendências para a equipe do colégio:
   1) data-edital-url  → link do PDF do edital 2027
@@ -382,11 +382,13 @@ Fontes oficiais, formulário e integração com Bitrix ainda devem ser conectado
   #monte2027 .m-student{height:auto;align-self:stretch;overflow:hidden;align-items:flex-end;justify-content:center}
   #monte2027 .m-student img{
     width:auto;height:112vh;max-width:150%;object-fit:contain;object-position:center bottom;margin:0;
+    /* translateY desce a figura: a cabeça passa a "começar" na altura do título. */
+    transform:translateY(14vh);
   }
 }
 </style>
 
-<div id="monte2027" data-version="31" data-edital-url="" data-video-url="" data-video-poster="" data-privacy-url="">
+<div id="monte2027" data-version="32" data-edital-url="" data-video-url="" data-video-poster="" data-privacy-url="">
   <section class="m-hero" aria-label="Provão Monte 2027">
     <svg class="m-ribbon m-ribbon--hero" viewBox="0 0 390 90" aria-hidden="true" focusable="false"><path d="M-20 100C60 100 67 20 157 24S278 72 420 8"/></svg>
     <div class="m-shell m-hero-grid">
