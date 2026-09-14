@@ -1,4 +1,4 @@
-<!-- MONTE • AJUSTE 26 (stack central do hero integrado — mesmo eixo e espaçamento uniforme)
+<!-- MONTE • AJUSTE 27 (aluno recortado no tronco e ampliado no hero)
 Cole este bloco inteiro no Bitrix, substituindo a versão anterior.
 Pendências para a equipe do colégio:
   1) data-edital-url  → link do PDF do edital 2027
@@ -329,9 +329,27 @@ Fontes oficiais, formulário e integração com Bitrix ainda devem ser conectado
   #monte2027 .m-campaign{gap:12px}
   #monte2027 .m-offer-art{width:100%;max-width:250px;margin:0 auto}
 }
+/* AJUSTE 27 — aluno recortado (tronco pra cima) e ampliado: a figura é muito
+   alta, então em vez de mostrar o corpo inteiro, ampliamos e cortamos as pernas
+   pela base do contêiner (overflow:hidden + topo ancorado). */
+#monte2027 .m-student{overflow:hidden}
+@media(min-width:1100px){
+  #monte2027 .m-student{height:700px;align-items:flex-start;align-self:end}
+  #monte2027 .m-student img{
+    width:150%;max-width:none;height:auto;object-fit:contain;object-position:top center;
+  }
+}
+@media(min-width:640px) and (max-width:1099px){
+  #monte2027 .m-student{height:560px;align-items:flex-start}
+  #monte2027 .m-student img{width:150%;max-width:none;height:auto}
+}
+@media(max-width:639px){
+  #monte2027 .m-student{align-items:flex-start;overflow:hidden}
+  #monte2027 .m-student img{width:130%;max-width:none;height:auto}
+}
 </style>
 
-<div id="monte2027" data-version="26" data-edital-url="" data-video-url="" data-video-poster="" data-privacy-url="">
+<div id="monte2027" data-version="27" data-edital-url="" data-video-url="" data-video-poster="" data-privacy-url="">
   <section class="m-hero" aria-label="Provão Monte 2027">
     <svg class="m-ribbon m-ribbon--hero" viewBox="0 0 390 90" aria-hidden="true" focusable="false"><path d="M-20 100C60 100 67 20 157 24S278 72 420 8"/></svg>
     <div class="m-shell m-hero-grid">
